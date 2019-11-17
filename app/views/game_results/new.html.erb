@@ -1,0 +1,38 @@
+<h1>News登録</h1>
+
+<%= form_for(@game) do |g| %>
+
+  <div id="Staff">
+
+    <div class="field">
+      <label class=":Title ">タイトル</label>
+      <%= g.text_field :title %>
+    </div>
+
+    <div class="field">
+      <label class="Result">結果</label>
+      <%= g.text_field :result %>
+    </div>
+
+    <div class="field">
+      <label class="Place">会場</label>
+      <%= g.text_field :place %>
+    </div>
+
+    <div class="field">
+      <label class="Street_address">会場住所</label>
+      <%= g.text_field :street_address %>
+    </div>
+
+    <div class="field">
+      <label class="Match_day ">日付</label>
+      <%= g.date_field :match_day %>
+    </div>
+
+    <div class="field-tag">
+      <%= g.submit "投稿" %>
+    </div>
+
+  </div>
+
+<% end %>

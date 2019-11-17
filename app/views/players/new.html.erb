@@ -1,0 +1,48 @@
+<h1>選手登録</h1>
+
+<%= form_for(@player) do |p| %>
+
+  <div id="Staff">
+
+    <div class="field">
+      <label class=":Player_name ">選手名</label>
+      <%= p.text_field :player_name %>
+    </div>
+
+    <div class="field">
+      <label class="School_year">学年</label>
+      <%= p.select :school_year, ['1年', '2年', '3年'], {include_blank: '選択ボックス'} %>
+    </div>
+
+    <div class="field">
+      <label class="Part">役割</label>
+      <%= p.select :part, ['キャプテン', '副キャプテン', 'マネージャー'], {include_blank: '選択ボックス'} %>
+    </div>
+
+    <div class="field">
+      <label class="Position">ポジション</label>
+      <%= p.select :position, ['GK', 'DF', 'MF', 'FW'], {include_blank: '選択ボックス'} %>
+    </div>
+
+    <div class="field">
+      <label class="Former-affiliation">前所属先</label>
+      <%= p.text_area :former_affiliation %>
+    </div>
+
+    <div class="field">
+      <label class="Course">主な進路</label>
+      <%= p.text_area :course %>
+    </div>
+
+    <div class="field">
+      <label class="Introduction">自己紹介</label>
+      <%= p.text_area :introduction %>
+    </div>
+
+    <div class="field-tag">
+      <%= p.submit "投稿" %>
+    </div>
+
+  </div>
+
+<% end %>

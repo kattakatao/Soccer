@@ -1,0 +1,27 @@
+<h1>スタッフ新規</h1>
+
+<%= form_for(@staff) do |f| %>
+
+  <div id="Staff">
+
+    <div class="field">
+      <label class="Staff-name">スタッフ名</label>
+      <%= f.text_field :staff_name %>
+    </div>
+
+    <div class="field">
+      <label class="Staff-part">役職</label>
+      <%= f.text_field :part %>
+    </div>
+
+    <div class="field">
+      <label class="Staff-introduction">自己紹介</label>
+      <%= f.text_area :introduction %>
+    </div>
+
+    <div class="field-tag">
+      <%= f.submit "投稿" %>
+    </div>
+
+  </div>
+<% end %>

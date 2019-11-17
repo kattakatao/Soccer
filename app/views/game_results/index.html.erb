@@ -1,0 +1,10 @@
+<h1>News</h1>
+
+<% @games.each do |g| %>
+  <%= g.title %>
+  <%= g.result %>
+  <%= g.place%>
+  <%= g.street_address %>
+  <%= g.match_day%>
+
+<% end %>

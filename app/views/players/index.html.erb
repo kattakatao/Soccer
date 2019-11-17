@@ -1,0 +1,13 @@
+<h1>選手紹介</h1>
+
+<% @players.each do |s| %>
+
+  <%= s.player_name %>
+  <%= s.school_year %>
+  <%= s.part %>
+  <%= s.position %>
+  <%= s.former_affiliation %>
+  <%= s.course %>
+  <%= s.introduction %>
+
+<% end %>
